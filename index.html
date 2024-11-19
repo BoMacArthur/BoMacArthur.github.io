@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Earth Engine Light Code Style</title>
+  <title>Google Earth Engine Code Style</title>
   <style>
     body {
       font-family: 'Consolas', Monaco, 'Courier New', monospace;
       background-color: #f5f5f5; /* Light background */
-      color: #333333; /* Dark text for readability */
+      color: #333333; /* Default text color */
       margin: 0;
       padding: 20px;
     }
@@ -17,7 +17,7 @@
     }
     .gee-code {
       background-color: #ffffff; /* White editor background */
-      color: #333333; /* Default text color for code */
+      color: #333333; /* Default text color */
       font-family: Consolas, Monaco, 'Courier New', monospace;
       font-size: 14px;
       line-height: 1.6;
@@ -40,12 +40,12 @@
 
   <pre class="gee-code">
     <code>
-      // This is a comment (green)
-      var dataset = ee.ImageCollection("MODIS/006/MOD13Q1");
-      var ndvi = dataset.select("NDVI"); // Keyword (blue)
-      var visParams = {min: 0.0, max: 9000.0}; // Variable (dark blue)
-      Map.addLayer(ndvi, visParams, "NDVI"); // Function (brownish-yellow)
-      print("NDVI Layer Added", ndvi); // String (red)
+      <span class="comment">// This is a comment (green)</span>
+      <span class="keyword">var</span> dataset = <span class="function">ee.ImageCollection</span>("MODIS/006/MOD13Q1");
+      <span class="keyword">var</span> ndvi = dataset.<span class="function">select</span>("NDVI"); <span class="comment">// Keyword (blue)</span>
+      <span class="keyword">var</span> visParams = {min: <span class="number">0.0</span>, max: <span class="number">9000.0</span>}; <span class="comment">// Variable (dark blue)</span>
+      Map.<span class="function">addLayer</span>(ndvi, visParams, <span class="string">"NDVI"</span>); <span class="comment">// Function (brownish-yellow)</span>
+      <span class="function">print</span>(<span class="string">"NDVI Layer Added"</span>, ndvi); <span class="comment">// String (red)</span>
     </code>
   </pre>
 </body>
