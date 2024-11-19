@@ -3,45 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Earth Engine Styled Code</title>
+  <title>Google Earth Engine Light Code Style</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
+      font-family: 'Consolas', Monaco, 'Courier New', monospace;
+      background-color: #f5f5f5; /* Light background */
+      color: #333333; /* Dark text for readability */
       margin: 0;
       padding: 20px;
-      color: #333;
     }
-    h1 {
-      color: #2e3b4e;
+    h1, p {
+      color: #222222; /* Darker heading text */
     }
     .gee-code {
-      background-color: #2e3b4e; /* GEE editor background */
-      color: #f8f8f2; /* Default text color */
-      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      background-color: #ffffff; /* White editor background */
+      color: #333333; /* Default text color for code */
+      font-family: Consolas, Monaco, 'Courier New', monospace;
+      font-size: 14px;
+      line-height: 1.6;
       padding: 15px;
       border-radius: 8px;
+      border: 1px solid #ccc; /* Light gray border */
       overflow: auto;
     }
-    .gee-code .comment { color: #6a9955; }   /* Green for comments */
-    .gee-code .keyword { color: #569cd6; }   /* Blue for keywords */
-    .gee-code .variable { color: #9cdcfe; }  /* Light blue for variables */
-    .gee-code .function { color: #dcdcaa; }  /* Yellow for functions */
-    .gee-code .string { color: #ce9178; }    /* Red for strings */
-    .gee-code .number { color: #b5cea8; }    /* Light green for numbers */
+    .gee-code .comment { color: #008000; font-style: italic; } /* Green for comments */
+    .gee-code .keyword { color: #0000ff; } /* Blue for keywords */
+    .gee-code .variable { color: #1c00cf; } /* Dark blue for variables */
+    .gee-code .function { color: #795e26; } /* Brownish-yellow for functions */
+    .gee-code .string { color: #a31515; } /* Red for strings */
+    .gee-code .number { color: #098658; } /* Green for numbers */
   </style>
 </head>
 <body>
-  <h1>Google Earth Engine Styled Code Example</h1>
-  <p>This example shows a Google Earth Engine-styled code block rendered with custom HTML and CSS:</p>
+  <h1>Google Earth Engine Light Code Style</h1>
+  <p>This example demonstrates Google Earth Engine code syntax styling with a light theme:</p>
 
   <pre class="gee-code">
     <code>
-      // Comment in GEE (green)
+      // This is a comment (green)
       var dataset = ee.ImageCollection("MODIS/006/MOD13Q1");
       var ndvi = dataset.select("NDVI"); // Keyword (blue)
-      var visParams = {min: 0.0, max: 9000.0}; // Variables (light blue)
-      Map.addLayer(ndvi, visParams, "NDVI"); // Function (yellow)
+      var visParams = {min: 0.0, max: 9000.0}; // Variable (dark blue)
+      Map.addLayer(ndvi, visParams, "NDVI"); // Function (brownish-yellow)
       print("NDVI Layer Added", ndvi); // String (red)
     </code>
   </pre>
