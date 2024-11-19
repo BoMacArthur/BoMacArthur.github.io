@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Earth Engine Styled Code</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #2e3b4e;
+    }
+    .gee-code {
+      background-color: #2e3b4e; /* GEE editor background */
+      color: #f8f8f2; /* Default text color */
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      padding: 15px;
+      border-radius: 8px;
+      overflow: auto;
+    }
+    .gee-code .comment { color: #6a9955; }   /* Green for comments */
+    .gee-code .keyword { color: #569cd6; }   /* Blue for keywords */
+    .gee-code .variable { color: #9cdcfe; }  /* Light blue for variables */
+    .gee-code .function { color: #dcdcaa; }  /* Yellow for functions */
+    .gee-code .string { color: #ce9178; }    /* Red for strings */
+    .gee-code .number { color: #b5cea8; }    /* Light green for numbers */
+  </style>
+</head>
+<body>
+  <h1>Google Earth Engine Styled Code Example</h1>
+  <p>This example shows a Google Earth Engine-styled code block rendered with custom HTML and CSS:</p>
+
+  <pre class="gee-code">
+    <code>
+      // Comment in GEE (green)
+      var dataset = ee.ImageCollection("MODIS/006/MOD13Q1");
+      var ndvi = dataset.select("NDVI"); // Keyword (blue)
+      var visParams = {min: 0.0, max: 9000.0}; // Variables (light blue)
+      Map.addLayer(ndvi, visParams, "NDVI"); // Function (yellow)
+      print("NDVI Layer Added", ndvi); // String (red)
+    </code>
+  </pre>
+</body>
+</html>
